@@ -1,10 +1,10 @@
 import React from "react";
-
+import css from "./css/NavBarSimple.module.css";
 
 class NavBarSimple extends React.Component {
-
   constructor(props) {
     super(props);
+
     this.state = {
       message: "Login here!",
       loginlogout: "Login"
@@ -22,7 +22,7 @@ class NavBarSimple extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={css.NavBar}>
         <h1>Logo Text</h1>
         <hr />
         <div>
