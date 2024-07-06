@@ -2,48 +2,40 @@ import React from 'react'
 import Book from './Book'
 
 function RenderingLists(props) {
-  const bookList = [
-    "booktitle one",
-    "booktitle two",
-    "booktitle three",
-    "booktitle four",
-    "booktitle five"
-  ]
 
   const books = [
     {
       title: "booktitle one",
       author: "author one",
-      pages: 100
+      pages: 100,
+      id: 1
     },
     {
       title: "booktitle two",
       author: "author two",
-      pages: 200
+      pages: 200,
+      id: 2
     },
     {
       title: "booktitle three",
       author: "author three",
-      pages: 300
+      pages: 300,
+      id: 3
     },
     {
       title: "booktitle four",
       author: "author four",
-      pages: 400
+      pages: 400,
+      id: 4
   }
   ]
 
 
   return (
     <div>
-      {bookList.map(book => {
-        return <h3>{book}</h3>
-      })}
-      
-      <hr />
 
       {books.map(book => {
-          return <Book book={book}/>
+          return <Book key={book.id} book={book}/>
       })}
     </div>
   )
